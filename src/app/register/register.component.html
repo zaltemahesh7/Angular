@@ -1,0 +1,67 @@
+<form>
+    <h2>Student Registration Form</h2>
+    <p>Fill in this form to register</p>
+    <br>
+
+    <!--Input elements for form-->
+    <label> First Name </label>
+    <input type="text" #firstName (blur)="register(firstName.value)" placeholder="Enter your first name" name="first_name" required>
+    <br>
+
+    <br>
+    <label> Last Name </label>
+    <input type="text" #lastName (blur)="register(lastName.value)" placeholder="Enter your last name" name="last_name" required>
+    <br>
+
+    <br>
+    <label> E-mail </label>
+    <input type="email" #email (blur)="register(email.value)" placeholder="Enter your e-mail" name="email" required>
+    <br>
+
+    <br>
+    <label> Date of Birth </label>
+    <input type="date" #dob (blur)="register(dob.value)" name="dob" required>
+    <br>
+
+    <br>
+    <label> Set Username </label>
+    <input type="text" #userName (blur)="register(userName.value)" placeholder="Set Username" name="username" required>
+    <br>
+
+    <br>
+    <label> Set Password </label>
+    <input type="password" placeholder="Set password" name="password" required>
+    <br>
+
+    <br>
+    <label>Gender</label><br>
+    <input type="radio" #gender (blur)="register(gender.value)" name="gender" value="Male">
+
+    <label for="Male">Male</label><br>
+    <input type="radio" name="gender" value="Female">
+
+    <label for="Female">Female</label><br>
+    <input type="radio" name="gender" value="Others">
+
+    <label for="Others">Others</label>
+    <br>
+
+    <br>
+    <label>Course :</label>
+
+    <select>
+        <option value="Course">Course</option>
+        <option value="CS">Computer Fundamentals</option>
+        <option value="AI">Artificial Intelligence</option>
+        <option value="ML">Machine Learning</option>
+        <option value="OOPS">Object Oriented Programming</option>
+        <option value="DBMS">Database Management System</option>
+    </select>
+
+    <br>
+
+    <br>
+    <input type="button" value="Register" (click)="register('click')" />
+
+
+</form>
